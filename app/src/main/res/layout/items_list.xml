@@ -1,0 +1,256 @@
+
+
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <TextView
+            android:id="@+id/tvmoney"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="46dp"
+            android:layout_marginTop="14dp"
+            android:layout_marginEnd="308dp"
+            android:text="Money In"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent" />
+
+        <ImageView
+            android:id="@+id/tvbalance"
+            android:layout_width="46dp"
+            android:layout_height="43dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="2dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvThree"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/ivOne"
+            app:srcCompat="@drawable/balance" />
+
+        <TextView
+            android:id="@+id/tvout"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="171dp"
+            android:layout_marginEnd="56dp"
+            android:text="Money Out"
+            android:textSize="16sp"
+            app:layout_constraintBottom_toBottomOf="@+id/tvmoney"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvmoney"
+            app:layout_constraintTop_toTopOf="@+id/tvmoney" />
+
+        <ImageView
+            android:id="@+id/ivout"
+            android:layout_width="42dp"
+            android:layout_height="45dp"
+            android:layout_marginStart="129dp"
+            android:layout_marginTop="6dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvout"
+            app:layout_constraintStart_toEndOf="@+id/tvmoney"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/expense" />
+
+        <ImageView
+            android:id="@+id/ivOne"
+            android:layout_width="43dp"
+            android:layout_height="49dp"
+            android:layout_marginTop="2dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvmoney"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toTopOf="parent"
+            app:srcCompat="@drawable/income" />
+
+        <TextView
+            android:id="@+id/tvThree"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="40dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="298dp"
+            android:text="Balance"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvmoney" />
+
+        <TextView
+            android:id="@+id/tvFour"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="185dp"
+            android:layout_marginTop="46dp"
+            android:layout_marginEnd="47dp"
+            android:text="Transaction"
+            android:textSize="16sp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toEndOf="@+id/tvThree"
+            app:layout_constraintTop_toBottomOf="@+id/tvout" />
+
+        <ImageView
+            android:id="@+id/ivFour"
+            android:layout_width="43dp"
+            android:layout_height="39dp"
+            android:layout_marginStart="132dp"
+            android:layout_marginTop="24dp"
+            android:layout_marginEnd="5dp"
+            app:layout_constraintEnd_toStartOf="@+id/tvFour"
+            app:layout_constraintStart_toEndOf="@+id/tvThree"
+            app:layout_constraintTop_toBottomOf="@+id/ivout"
+            app:srcCompat="@drawable/transactions" />
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilsalary"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="16dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tvbalance">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edOne"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Salary" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilrent"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilsalary">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edTwo"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Rent" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tildivident"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilrent">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edThree"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Dividend" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilelectricity"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tildivident">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edFour"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Electricity" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilintrnet"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilelectricity">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edFive"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Internet" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilSix"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilintrnet">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edSix"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Shopping" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilbusfare"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilSix">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edSeven"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Bus Fare" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+        <com.google.android.material.textfield.TextInputLayout
+            android:id="@+id/tilwalletbill"
+            android:layout_width="409dp"
+            android:layout_height="wrap_content"
+            android:layout_marginStart="1dp"
+            android:layout_marginTop="8dp"
+            android:layout_marginEnd="1dp"
+            app:layout_constraintEnd_toEndOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintTop_toBottomOf="@+id/tilbusfare">
+
+            <com.google.android.material.textfield.TextInputEditText
+                android:id="@+id/edEight"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Water Bill" />
+        </com.google.android.material.textfield.TextInputLayout>
+
+    </androidx.constraintlayout.widget.ConstraintLayout>
+</LinearLayout>
